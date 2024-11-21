@@ -74,22 +74,14 @@ cput_green "
   vim arch.conf
   cp arch.conf arch-lts.conf
   vim arch-lts.conf
+  # add '-lts' to the relevant lines
 
   bootctl
   exit
-  umount -R /mnt
-  cryptsetup close main
   reboot"
 
 # example:
-
 # edit /efi/loader/loader.conf to say:
 # "default arch
 # timeout 3"
 
-# edit /boot/loader/entries/arch.conf to:
-# "title Arch_Linux_extendedboot
-# linux /vmlinuz-linux
-# initrd /initramfs-linux.img
-# initrd /initramfs-linux-fallback.img
-# options root=/dev/sdX"
