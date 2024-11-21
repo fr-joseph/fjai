@@ -69,12 +69,9 @@ echo ""
 cput_green "
   vim /efi/loader/loader.conf
 
-  cp /fjai/arch.conf /boot/loader/entries/arch.conf
-  blkid /dev/nvme0n1p4 | cut -d' ' -f2 | cut -d'"' -f2 >> /boot/loader/entries/arch.conf
-  blkid /dev/mapper/main | cut -d' ' -f3 | cut -d'"' -f2 >> /boot/loader/entries/arch.conf
-  vim /boot/loader/entries/arch.conf
-
+  ./fjai/03-ai-bootloader-conf.sh
   cd /boot/loader/entries/
+  vim arch.conf
   cp arch.conf arch-lts.conf
   vim arch-lts.conf
 
