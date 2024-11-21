@@ -92,7 +92,7 @@ cput_red "mount"
 mkdir -p /mnt
 mount "/dev/mapper/$CRYPT" /mnt
 
-mkdir -p /mnt/{boot,efi,fj}
+mkdir -p /mnt/{boot,efi}
 mount -o umask=0077 "$DISK"1 /mnt/efi
 mount -o umask=0077 "$DISK"2 /mnt/boot
 
