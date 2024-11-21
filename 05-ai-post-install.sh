@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ "$(whoami)" = "root" ]; then
+  echo "ERROR: cannot be root"
+  exit 1
+fi
+
 # minimal
 BASE="base base-devel cryptsetup dhcpcd git linux linux-lts mkinitcpio nss-mdns"
 FIRMWARE="amd-ucode linux-firmware"
@@ -45,7 +50,7 @@ else
   makepkg -si
 fi
 
-sudo systemctl enable --now avahi-daemon.service
+# sudo systemctl enable --now avahi-daemon.service
 # sudo systemctl enable --now sshd.service
 
 sudo pacman -Syy
