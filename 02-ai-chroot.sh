@@ -71,7 +71,7 @@ cput_green "
 
   cp /fjai/arch.conf /boot/loader/entries/arch.conf
   blkid /dev/nvme0n1p4 | cut -d' ' -f2 | cut -d'"' -f2 >> /boot/loader/entries/arch.conf
-  blkid /dev/mapper/root | cut -d' ' -f3 | cut -d'"' -f2 >> /boot/loader/entries/arch.conf
+  blkid /dev/mapper/main | cut -d' ' -f3 | cut -d'"' -f2 >> /boot/loader/entries/arch.conf
   vim /boot/loader/entries/arch.conf
 
   cd /boot/loader/entries/
@@ -81,7 +81,7 @@ cput_green "
   bootctl
   exit
   umount -R /mnt
-  cryptsetup close root
+  cryptsetup close main
   reboot"
 
 # example:

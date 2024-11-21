@@ -148,7 +148,7 @@ genfstab -U /mnt > /mnt/etc/fstab
 # ==========================================================
 cput_red "chroot"
 
-cp -r /root/fjai /mnt
+cp -r /fjai /mnt
 
 echo "now run the following:"
 echo ""
