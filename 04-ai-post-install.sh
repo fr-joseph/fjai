@@ -37,6 +37,12 @@ if [ -f "$(which paru)" ]; then
     brave-bin \
     gimp-git \
     passage-git
+else
+  sudo pacman -S --needed base-devel
+  cd /tmp
+  git clone https://aur.archlinux.org/paru.git
+  cd paru
+  makepkg -si
 fi
 
 sudo systemctl enable --now avahi-daemon.service
