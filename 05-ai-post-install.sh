@@ -10,6 +10,7 @@ BASE="base base-devel cryptsetup dhcpcd git linux linux-lts mkinitcpio nss-mdns 
 FIRMWARE="amd-ucode linux-firmware"
 
 # core
+CLJ="clojure"
 GO="go gopls" # `go-task` for alternative to `just`, `go-tools` for static analysis
 TERMINAL="bat btop cloc fd fish fzf just man-db openssh plocate ripgrep shellcheck tealdeer"
 MAIL="isync msmtp notmuch"
@@ -28,6 +29,7 @@ WAYLAND="grim slurp mako bemenu-wayland sway swaybg sway-contrib swayidle swayim
 sudo pacman -S --needed \
   $BASE \
   $FIRMWARE \
+	$CLJ \
   $GO \
   $TERMINAL \
   $MAIL \
@@ -45,6 +47,8 @@ sudo pacman -S --needed \
 if [ -f "$(which paru)" ]; then
   paru -S --needed \
        brave-bin \
+			 babashka-bin \
+			 clojure-lsp-bin \
        exercism-bin \
 			 pandoc-bin \
        passage-git
