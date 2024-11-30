@@ -10,7 +10,7 @@ BASE="base base-devel cryptsetup dhcpcd git linux linux-lts mkinitcpio nss-mdns 
 FIRMWARE="amd-ucode linux-firmware"
 
 GO="go gopls" # `go-task` for alternative to `just`, `go-tools` for static analysis
-TERMINAL="bat btop cloc fd fish fzf just man-db neovim nodejs openssh plocate ripgrep shellcheck tealdeer tree-sitter-cli"
+TERMINAL="bat btop cloc fd fish fzf just man-db openssh plocate ripgrep shellcheck tealdeer"
 MAIL="isync msmtp notmuch"
 SECURITY="age pwgen"
 
