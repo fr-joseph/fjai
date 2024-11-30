@@ -20,7 +20,7 @@ DESKTOP="foot polkit"
 DEV="apache jdk-openjdk mariadb"
 FONT="noto-fonts noto-fonts-cjk noto-fonts-emoji otf-font-awesome ttf-firacode-nerd ttf-font-awesome ttf-nerd-fonts-symbols-mono"
 GPU_DRIVER="amdvlk vulkan-tools"
-MEDIA="yt-dlp mpv"
+MEDIA="gimp yt-dlp mpv"
 WAYLAND="grim slurp mako bemenu-wayland sway swaybg sway-contrib swayidle swayimg swaylock xdg-desktop-portal-gtk xdg-desktop-portal-wlr xorg-xwayland"
 
 # shellcheck disable=SC2086
