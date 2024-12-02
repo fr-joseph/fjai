@@ -6,18 +6,17 @@ if [ "$(whoami)" = "root" ]; then
 fi
 
 # minimal
-BASE="base base-devel cryptsetup dhcpcd git linux linux-lts mkinitcpio nss-mdns stow"
+BASE="base base-devel cryptsetup dhcpcd expac git git-lfs linux linux-lts mkinitcpio nss-mdns rlwrap stow"
 FIRMWARE="amd-ucode linux-firmware"
 
-GO="go gopls" # `go-task` for alternative to `just`, `go-tools` for static analysis
-TERMINAL="bat btop cloc fd fish fzf just man-db openssh plocate ripgrep shellcheck tealdeer"
+TERMINAL="bat btop cloc eza fd fish fzf just man-db openssh plocate ripgrep shellcheck tealdeer zoxide"
 MAIL="isync msmtp notmuch"
 SECURITY="age pwgen"
 
 # desktop
 AUDIO="pipewire pipewire-jack pulseaudio pavucontrol wireplumber"
 DESKTOP="foot polkit"
-DEV="apache jdk-openjdk mariadb"
+DEV="go gopls apache jdk-openjdk mariadb clojure"
 FONT="noto-fonts noto-fonts-cjk noto-fonts-emoji otf-font-awesome ttf-firacode-nerd ttf-font-awesome ttf-nerd-fonts-symbols-mono"
 GPU_DRIVER="amdvlk vulkan-tools"
 MEDIA="gimp yt-dlp mpv"
@@ -27,7 +26,6 @@ WAYLAND="grim slurp mako bemenu-wayland sway swaybg sway-contrib swayidle swayim
 sudo pacman -S --needed \
 	$BASE \
 	$FIRMWARE \
-	$GO \
 	$TERMINAL \
 	$MAIL \
 	$SECURITY \
@@ -39,13 +37,15 @@ sudo pacman -S --needed \
 	$MEDIA \
 	$WAYLAND
 
-# gimp-git \
+# gimp-git
+
 
 if [ -f "$(which paru)" ]; then
-	paru -S --needed \
-			brave-bin \
-			exercism-bin \
-			pandoc-bin
+		paru -S --needed \
+				 asdf-vm \
+				 brave-bin \
+				 exercism-bin \
+				 pandoc-bin
 
 	# it asks to review package build even if no updates are needed
 	# so just don't even ask me...
