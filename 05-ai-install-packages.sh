@@ -9,7 +9,7 @@ fi
 BASE="base base-devel cryptsetup dhcpcd expac git git-lfs linux linux-lts mkinitcpio nss-mdns rlwrap stow tmux"
 FIRMWARE="amd-ucode linux-firmware"
 
-TERMINAL="bat btop cloc eza fd fish fzf just lazygit man-db openssh plocate ripgrep shellcheck tealdeer zoxide w3m"
+TERMINAL="bat btop cloc eza fd fish fzf just lazygit man-db openssh plocate qmk ripgrep shellcheck tealdeer zoxide w3m"
 MAIL="isync msmtp notmuch"
 SECURITY="age pwgen"
 
