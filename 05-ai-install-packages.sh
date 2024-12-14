@@ -9,14 +9,14 @@ fi
 BASE="base base-devel cryptsetup dhcpcd expac git git-lfs linux linux-lts mkinitcpio nss-mdns rlwrap stow tmux"
 FIRMWARE="amd-ucode linux-firmware"
 
-TERMINAL="bat btop cloc eza fd fish fzf just lazygit man-db openssh plocate qmk ripgrep shellcheck tealdeer zoxide w3m"
+TERMINAL="bat btop cloc eza fd fish fzf inetutils just lazygit man-db openssh plocate qmk ripgrep shellcheck tealdeer zoxide w3m"
 MAIL="isync msmtp notmuch"
 SECURITY="age pwgen"
 
 # desktop
 AUDIO="pipewire pipewire-jack pulseaudio pavucontrol wireplumber"
-DESKTOP="foot polkit"
-DEV="go gopls apache jdk-openjdk mariadb"
+DESKTOP="foot polkit wxwidgets-gtk3"
+DEV="clojure go gopls apache jdk-openjdk mariadb"
 FONT="noto-fonts noto-fonts-cjk noto-fonts-emoji otf-font-awesome ttf-firacode-nerd ttf-font-awesome ttf-nerd-fonts-symbols-mono"
 GPU_DRIVER="amdvlk vulkan-tools"
 MEDIA="gimp yt-dlp mpv"
