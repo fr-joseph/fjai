@@ -6,7 +6,7 @@ if [ "$(whoami)" = "root" ]; then
 fi
 
 # minimal
-BASE="base base-devel cryptsetup dhcpcd expac git git-lfs linux linux-lts mkinitcpio nss-mdns rlwrap stow tmux"
+BASE="base base-devel cryptsetup dhcpcd expac git git-lfs inotify-tools libnotify linux linux-lts mkinitcpio nss-mdns rlwrap stow tmux"
 FIRMWARE="amd-ucode linux-firmware"
 
 TERMINAL="bat btop cloc eza fd fish fzf inetutils just lazygit man-db openssh plocate qmk ripgrep shellcheck tealdeer zoxide w3m"
@@ -45,7 +45,11 @@ if [ -f "$(which paru)" ]; then
          asdf-vm \
          brave-bin \
          exercism-bin \
-         pandoc-bin
+         pandoc-bin \
+         tailwindcss \
+         rustywind \
+         tmuxinator
+
 
   # it asks to review package build even if no updates are needed
   # so just don't even ask me...
