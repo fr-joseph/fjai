@@ -48,7 +48,8 @@ if [ -f "$(which paru)" ]; then
          pandoc-bin \
          tailwindcss \
          rustywind \
-         tmuxinator
+         tmuxinator \
+         wl-color-picker
 
 
   # it asks to review package build even if no updates are needed
