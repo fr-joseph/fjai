@@ -48,6 +48,7 @@ if [ -f "$(which paru)" ]; then
          pandoc-bin \
          tailwindcss \
          rustywind \
+         ruplacer \
          tmuxinator \
          wl-color-picker
 
