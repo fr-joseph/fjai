@@ -22,7 +22,7 @@ MEDIA="gimp yt-dlp mpv"
 WAYLAND="grim slurp mako bemenu-wayland sway swaybg sway-contrib swayidle swayimg swaylock xdg-desktop-portal-gtk xdg-desktop-portal-wlr xorg-xwayland"
 
 DEV="go"
-DEV+=" clojure jdk-openjdk wmname maven" # java/clojure
+DEV+=" clojure netbeans intellij-idea-community-edition jdk-openjdk wmname maven" # java/clojure
 DEV+=" apache mariadb" # misc
 
 # shellcheck disable=SC2086
@@ -48,6 +48,7 @@ if [ -f "$(which paru)" ]; then
          pandoc-bin \
          tailwindcss \
          ruplacer \
+         tartube \
          tmuxinator \
          wl-color-picker
 
