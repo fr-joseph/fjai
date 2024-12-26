@@ -21,6 +21,7 @@ setup_etc_file () {
   PERMS="$2"
   if [ -f "$SRC/$SUBPATH" ]; then
     sudo cp -f "$SRC/$SUBPATH" "/etc/$SUBPATH"
+    # shellcheck disable=SC2086
     sudo chmod $PERMS "/etc/$SUBPATH"
     sudo chown root:root "/etc/$SUBPATH"
   fi
@@ -41,8 +42,10 @@ diff_files () {
 if [ "$1" = "force" ]; then
     setup_etc_file hosts 644
     setup_etc_file sudoers 440
+    setup_etc_file nsswitch.conf 644
 else
     green "diffing...use 'force' to actually copy from bak to etc..."
     diff_files hosts
     diff_files sudoers
+    diff_files nsswitch.conf
 fi

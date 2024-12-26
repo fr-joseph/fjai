@@ -19,6 +19,7 @@ DESKTOP="foot polkit wxwidgets-gtk3"
 FONT="noto-fonts noto-fonts-cjk noto-fonts-emoji otf-font-awesome ttf-firacode-nerd ttf-font-awesome ttf-nerd-fonts-symbols-mono"
 GPU_DRIVER="amdvlk vulkan-tools"
 MEDIA="gimp yt-dlp mpv"
+PRINTER="cups avahi nss-mdns gtk3 dbus-python python-gobject ghostscript hplip"
 WAYLAND="grim slurp mako bemenu-wayland sway swaybg sway-contrib swayidle swayimg swaylock xdg-desktop-portal-gtk xdg-desktop-portal-wlr xorg-xwayland"
 
 DEV="go"
@@ -37,6 +38,7 @@ sudo pacman -S --needed \
   $FONT \
   $GPU_DRIVER \
   $MEDIA \
+  $PRINTER \
   $WAYLAND \
   $DEV
 
@@ -67,7 +69,8 @@ else
   makepkg -si
 fi
 
-# sudo systemctl enable --now avahi-daemon.service
+sudo systemctl enable --now avahi-daemon
+sudo systemctl enable --now cups
 # sudo systemctl enable --now sshd.service
 
 sudo pacman -Syy
