@@ -15,7 +15,8 @@ SECURITY="age pwgen"
 
 # desktop
 AUDIO="pipewire pipewire-jack pulseaudio pavucontrol wireplumber"
-DESKTOP="foot polkit wxwidgets-gtk3"
+DBOX="crun distrobox fuse-overlayfs podman"
+DESKTOP="ghostty polkit wxwidgets-gtk3"
 FONT="noto-fonts noto-fonts-cjk noto-fonts-emoji otf-font-awesome ttf-firacode-nerd ttf-font-awesome ttf-nerd-fonts-symbols-mono"
 GPU_DRIVER="amdvlk vulkan-tools"
 MEDIA="gimp yt-dlp mpv"
@@ -34,6 +35,7 @@ sudo pacman -S --needed \
   $MAIL \
   $SECURITY \
   $AUDIO \
+  $DBOX \
   $DESKTOP \
   $FONT \
   $GPU_DRIVER \
