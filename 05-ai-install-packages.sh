@@ -9,7 +9,7 @@ fi
 BASE="base base-devel cryptsetup dhcpcd expac git git-lfs inotify-tools libnotify linux linux-lts mkinitcpio nss-mdns rlwrap stow tmux"
 FIRMWARE="amd-ucode linux-firmware"
 
-TERMINAL="bat btop cloc eza fd fish fzf inetutils just man-db openssh plocate qmk ripgrep shellcheck tealdeer zoxide w3m"
+TERMINAL="bat btop cloc eza fd fish fzf inetutils just libwebp man-db openssh plocate qmk ripgrep rsync shellcheck tealdeer zoxide w3m"
 MAIL="isync msmtp notmuch"
 SECURITY="age pwgen"
 
@@ -25,7 +25,7 @@ WAYLAND="grim slurp mako bemenu-wayland sway swaybg sway-contrib swayidle swayim
 
 DEV="go"
 DEV+=" clojure netbeans intellij-idea-community-edition jdk-openjdk wmname maven" # java/clojure
-DEV+=" apache mariadb" # misc
+DEV+=" apache hugo mariadb" # misc
 
 # shellcheck disable=SC2086
 sudo pacman -S --needed \
@@ -45,17 +45,16 @@ sudo pacman -S --needed \
   $DEV
 
 if [ -f "$(which paru)" ]; then
-    paru -S --needed \
-         asdf-vm \
-         brave-bin \
-         exercism-bin \
-         pandoc-bin \
-         tailwindcss \
-         ruplacer \
-         tartube \
-         tmuxinator \
-         wl-color-picker
-
+  paru -S --needed \
+    asdf-vm \
+    brave-bin \
+    entr \
+    exercism-bin \
+    pandoc-bin \
+    ruplacer \
+    tartube \
+    tmuxinator \
+    wl-color-picker
 
   # it asks to review package build even if no updates are needed
   # so just don't even ask me...
@@ -73,6 +72,7 @@ fi
 
 sudo systemctl enable --now avahi-daemon
 sudo systemctl enable --now cups
-# sudo systemctl enable --now sshd.service
+# sudo systemctl enable --now httpd
+# sudo systemctl enable --now sshd
 
 sudo pacman -Syy
